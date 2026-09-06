@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Import screenshots safely and review their processing status.">
+  <title>Screenshot App · Import</title><link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar"><a class="brand" href="./" aria-label="Screenshot App home"><span class="brand-mark" aria-hidden="true">▦</span> Screenshot App</a><span class="privacy"><span class="dot" aria-hidden="true"></span> Originals protected</span></header>
+  <main class="shell">
+    <section class="intro" aria-labelledby="page-title"><div><p class="eyebrow">Library / Import</p><h1 id="page-title">Bring your screenshots into focus.</h1><p class="lede">Add a batch and we’ll preserve the originals while preparing searchable, reviewable records.</p></div><div class="privacy-note"><span aria-hidden="true">◈</span><span><strong>Private by default</strong><br>Evidence and sensitive content stay out of ordinary views.</span></div></section>
+    <section class="import-card" aria-labelledby="import-title">
+      <div class="section-heading"><div><h2 id="import-title">Import batch</h2><p id="drop-help">PNG, JPG, HEIC or WEBP · up to 50 files</p></div><span class="batch-state" id="batch-state">Ready</span></div>
+      <label class="dropzone" id="dropzone" for="file-input"><input id="file-input" type="file" accept="image/png,image/jpeg,image/webp,image/heic" multiple><span class="upload-icon" aria-hidden="true">↑</span><strong>Select screenshots</strong><span>or drop files here</span><span class="button secondary" aria-hidden="true">Choose files</span></label>
+      <div id="file-error" class="error-summary" role="alert" tabindex="-1" hidden><strong id="error-title">There is a problem</strong><span id="error-message"></span></div>
+      <div class="progress-wrap" id="progress-wrap" hidden><div class="progress-label"><span id="progress-text">Preparing files…</span><span id="progress-value">0%</span></div><div class="progress-track"><div id="progress-bar" class="progress-bar"></div></div></div>
+      <div class="table-wrap"><table><caption class="sr-only">Imported screenshot files and processing status</caption><thead><tr><th scope="col">File</th><th scope="col">Provenance</th><th scope="col">Preservation</th><th scope="col">Status</th></tr></thead><tbody id="file-list"><tr class="empty-row"><td colspan="4"><span aria-hidden="true">◎</span><strong>No files yet</strong><span>Your batch will appear here as soon as you add screenshots.</span></td></tr></tbody></table></div>
+    </section>
+    <aside class="review-note" aria-label="Review guidance"><span class="review-icon" aria-hidden="true">!</span><div><strong>Some items may need your review</strong><p>Low-confidence classifications and sensitive evidence are never silently filed. You’ll be asked before they appear in your library.</p></div></aside>
+  </main><footer><span>Screenshot App MVP</span><span>Accessible import flow · v0.1</span></footer>
+  <script type="module" src="app.js"></script>
+</body></html>
