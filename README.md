@@ -1,1 +1,1 @@
-# screenshot-app
+Run the local API and browser UI with `python3 server.py --store .screenshot-data --port 4173`, then open `http://127.0.0.1:4173`. The UI uploads multipart files to `POST /api/ingest`; configure another deployment by changing `apiBase` in `api-adapter.js`. Originals are content-addressed by SHA-256, write-once, and never returned for editing. Re-uploading identical bytes returns `duplicate` with the existing stable ID. Run `npm test` and `pytest` for frontend/backend tests.
