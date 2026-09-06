@@ -1,0 +1,1 @@
+export function createMockRecords(files){return [...files].map((file,index)=>({name:file.name,size:file.size,type:file.type||'image',hash:`sha256:${(index+1).toString(16).padStart(8,'0')}…`,status:index===1?'duplicate':index===2?'review_required':'pending',preservation:'Original locked'}));}
